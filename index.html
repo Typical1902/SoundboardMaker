@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SoundboardMaker</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+        <style>
+            .avatar{
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <h1>Soundboard</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="well">
+                        <p>
+                            <img src="assets/img/vader.jpeg" alt="Darth Vader" class="img-circle avatar">
+                        </p>
+                        <button id="darkside" type="button" class="btn btn-primary">Dark side</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="well">
+                        <p>
+                            <img src="assets/img/yoda.png" alt="Yoda" class="img-circle avatar">
+                        </p>
+                        <button id="old" type="button" class="btn btn-primary">900 years old</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="well">
+                        <p>
+                            <img src="assets/img/ackbar.jpeg" alt="Admiral Ackbar" class="img-circle avatar">
+                        </p>
+                        <button id="trap" type="button" class="btn btn-primary">It's a trap!</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="well">
+                        <p>Dr. Dre</p>
+                        <button id="drDre" type="button" class="btn btn-success">Play</button>
+                        <button id="drDreStop" type="button" class="btn btn-danger">Stop</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/soundboard.js"></script>
+        <script>
+            var soundboard = new Soundboard();
+
+            // SW sounds
+            soundboard.load('assets/sounds/trap.mp3', 'trap', false);
+            soundboard.load('assets/sounds/old.mp3', 'old', false);
+            soundboard.load('assets/sounds/darkside.mp3', 'darkside', false);
+
+            // DRE
+            soundboard.load('assets/sounds/stillDRE.mp3', 'drDre', true);
+        </script>
+    </body>
+</html>
